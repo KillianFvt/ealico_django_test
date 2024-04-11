@@ -44,6 +44,7 @@ class ElementModel(models.Model):
     factory = models.ForeignKey(Factory, on_delete=models.CASCADE)
     building = models.ForeignKey(Building, null=True, blank=True, on_delete=models.CASCADE)
     is_conforme = models.BooleanField(default=True)
+    date = models.DateField(null=True, blank=True, auto_now_add=True)
 
 
 class ElementModelTest1(models.Model):
